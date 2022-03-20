@@ -1,0 +1,27 @@
+ALGORITHM checkpoint
+VAR
+    ch: STRING
+    i , j, h,e : INTEGER
+
+    
+BEGIN
+ i,h,e :=0
+ j:=1
+ READ(ch)
+    WHILE (
+        ch [i] <> "."
+    ) DO
+        e+=1 
+        IF (ch [i] = " ") 
+        THEN j += 1
+            IF (ch [i]= "a" OR "e" OR "i" OR "o" OR "u" OR "y") 
+            THEN
+               h+=1
+            END_IF
+        END_IF
+    END_WHILE
+ write("le nombre de caracteres est ",e)
+ write ("le nombre de mots est",j)
+ write("le nombre de voyelles est",h)
+    
+END
